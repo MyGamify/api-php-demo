@@ -16,11 +16,11 @@
 		case 'dev':
 			/* Not implemented yet */
 			$ssl = true;
-			$apiUrl = "boby.my-gamify.fr/api";
+			$apiUrl = "boby.mygamify.fr/api";
 			break;
 		default:
 			$ssl = true;
-			$apiUrl = "https://www.my-gamify.fr/api/";
+			$apiUrl = "https://www.mygamify.fr/api/";
 			break;
 	}
 ?>

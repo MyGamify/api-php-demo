@@ -67,11 +67,11 @@ function diplayGamifyCallBack( Array $data )
 		$class = "error";
 	}
 	echo "<div class='api-data " . $class . "'>";
-		print_r( $dataJson );
 		echo "<h3>Header : </h3>";
 		echo $data["header"];
 		echo "<h4>Body : </h4>";
 		echo "<pre>" . $data["body"] . "</pre>";
 	echo "</div>";
+	
 }
 ?>
