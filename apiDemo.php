@@ -1,7 +1,7 @@
 <?php
 	echo "<div class='test-api'>";
 	echo "<h2>API Hello World</h2>";
-	diplayGamifyCallBack( getCurlData( $apiUrl . "test", [], $ssl ) );
+	diplayGamifyCallBack( getCurlData( $apiUrl . "test", [], $ssl ), displayFull );
 	
 	echo "<h2>API Gift</h2>";
 	$gamifyCallBack = getCurlData( $apiUrl . "gift/" . idGame, [
@@ -14,7 +14,7 @@
 		[ "id" => 2, "origine" => "web", "name" => "Un mug 🦄", "ig" => "2017-05-12 00:00:00" ],
 		[ "id" => 3, "origine" => "sms", "name" => "Un mug 🦄", "ig" => "2017-05-12 00:00:00" ],
 	], $ssl );
-	diplayGamifyCallBack( $gamifyCallBack );
+	diplayGamifyCallBack( $gamifyCallBack, displayFull );
 	echo "</div>";
 
 	echo "<div class='test-api'>";
@@ -34,7 +34,7 @@
 		[ "id" => 2, "origine" => "web", "number_call" => 12, "number_unfactured_call" => 6, "number_sms" => 3, "calling_duraion" => "80000", "calling_average" => "500", "start_at" => "2017-05-12 00:00:00", "end_at" => "2017-05-12 00:00:05" ],
 		[ "id" => 3, "origine" => "sms", "number_call" => 12, "number_unfactured_call" => 6, "number_sms" => 3, "calling_duraion" => "80000", "calling_average" => "500", "start_at" => "2017-05-12 00:00:00", "end_at" => "2017-05-12 00:00:05" ],
 	], $ssl );
-	diplayGamifyCallBack( $gamifyCallBack );
+	diplayGamifyCallBack( $gamifyCallBack, displayFull );
 	echo "</div>";
 
 	echo "<div class='test-api'>";
@@ -62,6 +62,6 @@
 		[ "id" => 2, "origine" => "web", "audio" => "https://www.url-audio", "date" => "2017-05-12 00:00:00", "gift" => "12", "phone" => "33000000000", "phone_bis" => "33000000000", "email" => null, "last_name" => "Dhoe", "first_name" => "Jhon", "address" => "32 rue du mirail", "address_bis" => null, "post_code" => "33000", "city" => "Bordeaux", "country" => "France", "no_card" => "12345679", "optin" => 0 ],
 		[ "id" => 3, "origine" => "sms", "audio" => "https://www.url-audio", "date" => "2017-05-12 00:00:00", "gift" => null, "phone" => "33000000000", "phone_bis" => "33000000000", "email" => null, "last_name" => "Durant", "first_name" => "Arthur", "address" => "32 rue du mirail", "address_bis" => null, "post_code" => "33000", "city" => "Bordeaux", "country" => "France", "no_card" => "12345610", "optin" => 1 ]
 	], $ssl );
-	diplayGamifyCallBack( $gamifyCallBack );
+	diplayGamifyCallBack( $gamifyCallBack, displayFull );
 	echo "</div>";
 ?>

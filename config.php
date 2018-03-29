@@ -7,6 +7,12 @@
 	// define( "apiMod", "dev" );
 	define( "apiMod", "prod" );
 
+	/**
+	 * false: Display only the last http header & body response.  
+	 * true: Display all.  
+	 */
+	define( "displayFull", false );
+
 	switch ( apiMod )
 	{
 		case 'local':

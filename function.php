@@ -39,6 +39,9 @@ function getCurlData( String $url, Array $fields = [], Bool $https = false, Stri
 
 	if ( isset( $datas[2] ) )
 	{
+		/*
+		 * Handdle HTTP 100 & 300
+		 */
 		foreach ( $datas as $key => $data )
 		{
 			if( json_decode( $data ) !== null )
@@ -66,9 +69,10 @@ function getCurlData( String $url, Array $fields = [], Bool $https = false, Stri
  * @since 0.0.1 ( 2018-03-29 )
  *
  * @param Array $data
+ * @param Bool $ful
  * @return Void
  */
-function diplayGamifyCallBack( Array $data )
+function diplayGamifyCallBack( Array $data, Bool $full = false )
 {
 	$dataJson = json_decode( $data["body"] );
 	if ( isset( $dataJson->success ) )
@@ -80,11 +84,22 @@ function diplayGamifyCallBack( Array $data )
 		$class = "error";
 	}
 	echo "<div class='api-data " . $class . "'>";
+	
+	if ( $full )
+	{
+		echo "<pre>" . $data["full"] . "</pre>";
+	}
+	else
+	{
 		echo "<h3>Header : </h3>";
-		echo $data["header"];
+		if ( isset( $data["header"] ) )
+		{
+			echo "<pre>" . $data["header"] . "</pre>";
+		}
+		echo "<pre>" . $data["header"] . "</pre>";
 		echo "<h4>Body : </h4>";
 		echo "<pre>" . $data["body"] . "</pre>";
+	}
 	echo "</div>";
-	
 }
 ?>
