@@ -3,9 +3,9 @@
 	define( "idGame", "00012A" ); // id Test
 
 	// Uncoment the mod you need
-	define( "apiMod", "local" );
+	// define( "apiMod", "local" );
 	// define( "apiMod", "dev" );
-	// define( "apiMod", "prod" );
+	define( "apiMod", "prod" );
 
 	switch ( apiMod )
 	{

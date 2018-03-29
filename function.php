@@ -34,17 +34,30 @@ function getCurlData( String $url, Array $fields = [], Bool $https = false, Stri
 	{
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	}
-	$data = explode("\r\n\r\n", curl_exec($ch) );
+	$chData = curl_exec($ch);
+	$datas = explode("\r\n\r\n", $chData );
 
-	if ( isset( $data[1] ) )
+	if ( isset( $datas[2] ) )
 	{
-		$ret["header"] = $data[0];
-		$ret["body"] = $data[1];
+		foreach ( $datas as $key => $data )
+		{
+			if( json_decode( $data ) !== null )
+			{
+				$ret["header"] = $datas[ (int) $key -1 ];
+				$ret["body"] = $datas[ (int) $key ];
+			}
+		}
+	}
+	elseif( isset( $datas[1] ) )
+	{
+		$ret["header"] = $datas[0];
+		$ret["body"] = $datas[1];
 	}
 	else
 	{
-		$ret["body"] = $data[0];
+		$ret["body"] = $datas[0];
 	}
+	$ret["full"] = $chData;
 	return $ret;
 }
 
