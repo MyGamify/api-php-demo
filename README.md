@@ -5,9 +5,9 @@
 ````
 |
 | - README.md
-| - apiDemo.php  // A modifier pour tester vos json
-| - config.php   // ⚠ A modifier avec votre propre configuration
-| - function.php // Quelques petit helper
+| - apiDemo.php  // À modifier pour tester vos json
+| - config.php   // ⚠ À modifier avec votre propre configuration
+| - function.php // Quelques petits helper
 | - index.php
 | - screenShoot.jpg
 ````
