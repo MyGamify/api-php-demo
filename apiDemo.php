@@ -26,13 +26,13 @@
 			"number_call" => 12, //  (Int 11) nombre d'appels
 			"number_unfactured_call" => 6, // (Int 11) temps cumulé des appels non facturés en ms
 			"number_sms" => 3, // (Int 11) nombre de sms
-			"calling_duraion" => "80000", // (Int 11) temps cumulé des appels en ms
+			"calling_duration" => "80000", // (Int 11) temps cumulé des appels en ms
 			"calling_average" => "500", // (Int 11) temps moyen des appels en ms
 			"start_at" => "2017-05-12 00:00:00", // (Date time (0000-00-00 00:00:00) ) début de la tranche donnée
 			"end_at" => "2017-05-12 00:00:05"  // (Date time (0000-00-00 00:00:00) ) fin de la tranche donnée
 		],
-		[ "id" => 2, "origine" => "web", "number_call" => 12, "number_unfactured_call" => 6, "number_sms" => 3, "calling_duraion" => "80000", "calling_average" => "500", "start_at" => "2017-05-12 00:00:00", "end_at" => "2017-05-12 00:00:05" ],
-		[ "id" => 3, "origine" => "sms", "number_call" => 12, "number_unfactured_call" => 6, "number_sms" => 3, "calling_duraion" => "80000", "calling_average" => "500", "start_at" => "2017-05-12 00:00:00", "end_at" => "2017-05-12 00:00:05" ],
+		[ "id" => 2, "origine" => "web", "number_call" => 12, "number_unfactured_call" => 6, "number_sms" => 3, "calling_duration" => "80000", "calling_average" => "500", "start_at" => "2017-05-12 00:00:00", "end_at" => "2017-05-12 00:00:05" ],
+		[ "id" => 3, "origine" => "sms", "number_call" => 12, "number_unfactured_call" => 6, "number_sms" => 3, "calling_duration" => "80000", "calling_average" => "500", "start_at" => "2017-05-12 00:00:00", "end_at" => "2017-05-12 00:00:05" ],
 	], $ssl );
 	diplayGamifyCallBack( $gamifyCallBack, displayFull );
 	echo "</div>";
