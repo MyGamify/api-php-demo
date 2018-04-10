@@ -44,7 +44,7 @@
 			"id" => 1, // (Int 11) identifiant unique de la donnée
 			"origine" => "audio", // (String 255) origine stats
 			"audio" => "https://www.url-audio", // (URL valide et accessible en get) fichier audio
-			"date" => "2017-05-12 00:00:00", // (Date time (0000-00-00 00:00:00) ) date de la participation
+			"participation_date" => "2017-05-12 00:00:00", // (Date time (0000-00-00 00:00:00) ) date de la participation
 			"gift" => null, // (Int 11) id du lot gagné
 			"phone" => "33000000000", // (String 11) n° de téléphone au format international
 			"phone_bis" => "33000000000", // (String 11) n° de téléphone bis au format international
@@ -59,8 +59,8 @@
 			"no_card" => "12345678", // (Int 11) numéros de carte
 			"optin" => 1 // (Bolean) optin oui/non
 		],
-		[ "id" => 2, "origine" => "web", "audio" => "https://www.url-audio", "date" => "2017-05-12 00:00:00", "gift" => "12", "phone" => "33000000000", "phone_bis" => "33000000000", "email" => null, "last_name" => "Dhoe", "first_name" => "Jhon", "address" => "32 rue du mirail", "address_bis" => null, "post_code" => "33000", "city" => "Bordeaux", "country" => "France", "no_card" => "12345679", "optin" => 0 ],
-		[ "id" => 3, "origine" => "sms", "audio" => "https://www.url-audio", "date" => "2017-05-12 00:00:00", "gift" => null, "phone" => "33000000000", "phone_bis" => "33000000000", "email" => null, "last_name" => "Durant", "first_name" => "Arthur", "address" => "32 rue du mirail", "address_bis" => null, "post_code" => "33000", "city" => "Bordeaux", "country" => "France", "no_card" => "12345610", "optin" => 1 ]
+		[ "id" => 2, "origine" => "web", "audio" => "https://www.url-audio", "participation_date" => "2017-05-12 00:00:00", "gift" => 2, "phone" => "33000000000", "phone_bis" => "33000000000", "email" => null, "last_name" => "Dhoe", "first_name" => "Jhon", "address" => "32 rue du mirail", "address_bis" => null, "post_code" => "33000", "city" => "Bordeaux", "country" => "France", "no_card" => "12345679", "optin" => 0 ],
+		[ "id" => 3, "origine" => "sms", "audio" => "https://www.url-audio", "participation_date" => "2017-05-12 00:00:00", "gift" => 3, "phone" => "33000000000", "phone_bis" => "33000000000", "email" => null, "last_name" => "Durant", "first_name" => "Arthur", "address" => "32 rue du mirail", "address_bis" => null, "post_code" => "33000", "city" => "Bordeaux", "country" => "France", "no_card" => "12345610", "optin" => 1 ]
 	], $ssl );
 	diplayGamifyCallBack( $gamifyCallBack, displayFull );
 	echo "</div>";
