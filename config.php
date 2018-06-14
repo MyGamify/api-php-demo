@@ -1,6 +1,6 @@
 <?php
 	define( "apiKey", "{yourApiKey}" );
-	define( "idGame", "00012A" ); // id Test
+	define( "idGame", "{yourIdGame}" );
 
 	// Uncoment the mod you need
 	// define( "apiMod", "local" );
@@ -17,16 +17,15 @@
 	{
 		case 'local':
 			$ssl = false;
-			$apiUrl = "http://127.0.0.1:8000/api/";
+			$apiUrl = "http://127.0.0.1:8000/apiV2/";
 			break;
 		case 'dev':
-			/* Not implemented yet */
 			$ssl = true;
-			$apiUrl = "boby.mygamify.fr/api";
+			$apiUrl = "preprod.mygamify.fr/apiV2";
 			break;
 		default:
 			$ssl = true;
-			$apiUrl = "https://www.mygamify.fr/api/";
+			$apiUrl = "https://www.mygamify.fr/apiV2/";
 			break;
 	}
 ?>
