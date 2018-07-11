@@ -16,27 +16,6 @@
 	], $ssl );
 	diplayGamifyCallBack( $gamifyCallBack, displayFull );
 	echo "</div>";
-
-	echo "<div class='test-api'>";
-	echo "<h2>API Stats</h2>";
-	$gamifyCallBack = getCurlData( $apiUrl . "stats/" . idGame, [
-		[
-			"key" => 1, // (Int 11) identifiant unique de la donnée
-			"origine" => "audio", // (String 255) origine stats
-			"number_call" => 12, //  (Int 11) nombre d'appels
-			"number_unfactured_call" => 6, // (Int 11) temps cumulé des appels non facturés en ms
-			"number_sms" => 3, // (Int 11) nombre de sms
-			"calling_duration" => "80000", // (Int 11) temps cumulé des appels en ms
-			"calling_average" => "500", // (Int 11) temps moyen des appels en ms
-			"start_at" => "2017-05-12 00:00:00", // (Date time (0000-00-00 00:00:00) ) début de la tranche donnée
-			"end_at" => "2017-05-12 00:00:05"  // (Date time (0000-00-00 00:00:00) ) fin de la tranche donnée
-		],
-		[ "key" => 2, "origine" => "web", "number_call" => 12, "number_unfactured_call" => 6, "number_sms" => 3, "calling_duration" => "80000", "calling_average" => "500", "start_at" => "2017-05-12 00:00:00", "end_at" => "2017-05-12 00:00:05" ],
-		[ "key" => 3, "origine" => "sms", "number_call" => 12, "number_unfactured_call" => 6, "number_sms" => 3, "calling_duration" => "80000", "calling_average" => "500", "start_at" => "2017-05-12 00:00:00", "end_at" => "2017-05-12 00:00:05" ],
-	], $ssl );
-	diplayGamifyCallBack( $gamifyCallBack, displayFull );
-	echo "</div>";
-
 	echo "<div class='test-api'>";
 	echo "<h2>API Played</h2>";
 	$gamifyCallBack = getCurlData( $apiUrl . "played/" . idGame, [
@@ -56,11 +35,15 @@
 			"post_code" => "33000", // (String 255) code postal du participant
 			"city" => "Bordeaux", // (String 255) ville du participant
 			"country" => "France", // (String 255) pays du participant
-			"no_card" => "12345678", // (Int 11) numéros de carte
+			"no_card" => "12345678", // (String 255) numéros de carte
+			"number_sms" => null, // (Int 11) nombre de sms
+			"calling_duration" => 200, // (Int 11) durée d'appel en seconde
 			"optin" => 1 // (Bolean) optin oui/non
 		],
-		[ "key" => 2, "origine" => "web", "audio" => "https://www.url-audio", "participation_date" => "2017-05-12 00:00:00", "gift" => 2, "phone" => "33000000000", "phone_bis" => "33000000000", "email" => null, "last_name" => "Dhoe", "first_name" => "Jhon", "address" => "32 rue du mirail", "address_bis" => null, "post_code" => "33000", "city" => "Bordeaux", "country" => "France", "no_card" => "12345679", "optin" => 0 ],
-		[ "key" => 3, "origine" => "sms", "audio" => "https://www.url-audio", "participation_date" => "2017-05-12 00:00:00", "gift" => 3, "phone" => "33000000000", "phone_bis" => "33000000000", "email" => null, "last_name" => "Durant", "first_name" => "Arthur", "address" => "32 rue du mirail", "address_bis" => null, "post_code" => "33000", "city" => "Bordeaux", "country" => "France", "no_card" => "12345610", "optin" => 1 ]
+		[ "key" => 2, "origine" => "web", "audio" => "https://www.url-audio", "participation_date" => "2017-05-12 00:00:00", "gift" => 2, "phone" => "33000000000", "phone_bis" => "33000000000", "email" => null, "last_name" => "Dhoe", "first_name" => "Jhon", "address" => "32 rue du mirail", "address_bis" => null, "post_code" => "33000", "city" => "Bordeaux", "country" => "France", "no_card" => "12345679", "number_sms" => null,
+			"calling_duration" => null, "optin" => 0 ],
+		[ "key" => 3, "origine" => "sms", "audio" => "https://www.url-audio", "participation_date" => "2017-05-12 00:00:00", "gift" => 3, "phone" => "33000000000", "phone_bis" => "33000000000", "email" => null, "last_name" => "Durant", "first_name" => "Arthur", "address" => "32 rue du mirail", "address_bis" => null, "post_code" => "33000", "city" => "Bordeaux", "country" => "France", "no_card" => "12345610", "number_sms" => 4,
+			"calling_duration" => null, "optin" => 1 ]
 	], $ssl );
 	diplayGamifyCallBack( $gamifyCallBack, displayFull );
 	echo "</div>";
