@@ -1,5 +1,5 @@
-## Api php demo ![PHP 7.1](https://img.shields.io/badge/PHP-7.1-blue.svg) ![V2](https://img.shields.io/badge/GamifyAPI-V2-brightgreen.svg)
-> En cas de doute, merci de vous référer au [wiki](https://github.com/MyGamify/api/wiki)
+## Api php demo ![PHP 7Deprecated1](https://img.shields.io/badge/PHP-7.1-blue.svg) ![V2](https://img.shields.io/badge/GamifyAPI-V3-brightgreen.svg)
+> En cas de doute, merci de vous référer au [wiki](https://github.com/MyGamify/apiV3/wiki)
 
 
 ````
