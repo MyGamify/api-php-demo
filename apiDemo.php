@@ -1,10 +1,13 @@
 <?php
 	echo "<div class='test-api'>";
 	echo "<h2>API Hello World</h2>";
-	diplayGamifyCallBack( getCurlData( $apiUrl . "test", [], $ssl ), displayFull );
+	diplayGamifyCallBack( getCurlData( $apiUrl . "test", 
+		[], 
+	$ssl ), 
+	displayFull );
 	
 	echo "<h2>API Gift</h2>";
-	$gamifyCallBack = getCurlData( $apiUrl . "gift/" . idGame, [
+	$gamifyCallBack = getCurlData( $apiUrl . "gift/" . idGame, 
 		[
 			"key" => 1, // (Int 11) identifiant unique du lot
 			"origine" => "audio", // (String 255) origine gift
