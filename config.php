@@ -5,7 +5,8 @@
 	// Uncoment the mod you need
 	define( "apiMod", "local" );
 	// define( "apiMod", "dev" );
-	//define( "apiMod", "prod" );
+	// define( "apiMod", "prod" );
+	// define( "apiMod", "hcnx" );
 
 	/**
 	 * false: Display only the last http header & body response.  
@@ -21,7 +22,11 @@
 			break;
 		case 'dev':
 			$ssl = true;
-			$apiUrl = "preprod.mygamify.fr/apiV3";
+			$apiUrl = "https://preprod.mygamify.fr/apiV3";
+			break;
+		case 'hcnx':
+			$ssl = true;
+			$apiUrl = "https://www.hcnx-tools.com/apiV3";
 			break;
 		default:
 			$ssl = true;
