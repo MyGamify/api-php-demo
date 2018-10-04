@@ -42,6 +42,8 @@
 			"number_sms" => null, // (Int 11) nombre de sms
 			"calling_duration" => 200, // (Int 11) durée d'appel en seconde
 			"optin" => 1 // (Bolean) optin oui/non
+			"birth_date" => 1 // (Date format YYYY-MM-DD) Date de naissance
+			"status" => 0 // (Int) Status de la participation (obligatoire)
 		],
 		[ "key" => 2, "origine" => "web", "audio" => "https://www.url-audio", "participation_date" => "2017-05-12 00:00:00", "gift" => 2, "phone" => "33000000000", "phone_bis" => "33000000000", "email" => null, "last_name" => "Dhoe", "first_name" => "Jhon", "address" => "32 rue du mirail", "address_bis" => null, "post_code" => "33000", "city" => "Bordeaux", "country" => "France", "no_card" => "12345679", "number_sms" => null,
 			"calling_duration" => null, "optin" => 0 ],
